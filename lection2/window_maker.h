@@ -165,5 +165,16 @@ int window_getche(int num)
 	return c.i;
 }
 
+// вывести строку начиная с текущей позиции курсора в окне.
+// возвратить 0 если окно не активное и 1 если активное.
+int window_puts(int num, char *str)
+{
+	if(!frame[num].active) return 0;
+
+	for(; *str; str++) 
+		window_putchar(num, *str);
+
+	return 1;
+}
 
 
