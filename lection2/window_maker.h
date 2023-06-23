@@ -4,7 +4,7 @@
 #define NORM_VID 7
 #define REV_VID 70H
 
-char far *vid_mem;
+far char *vid_mem;
 
 int make_window(int num, char *header, int startx, int starty, int endx, int endy, int border)
 {
