@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "stdlib.h"
 /*
  * Функция прерывания для достпупа к экрану. 
  * Прерывание 16 имеет несколько режимов, выбор
@@ -73,3 +74,6 @@ void restore_video(int startx, int endx, int starty, int endy, unsigned *buf_ptr
 		}
 	}
 }
+
+
+

@@ -1,5 +1,4 @@
 #include "functions.h"
-#include <cctype>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -121,7 +120,7 @@ int get_resp(int x, int y, int count, char *menu[], char* keys)
 	write_video(x+arrow_choice, y, menu[arrow_choice], NORM_VID);
 
 	if(c.ch[0]) { // обычная клавиша
-		key_choice = is_in(keys, std::tolower(c.ch[0]));
+		key_choice = is_in(keys, c.ch[0]);
 		if(key_choice) return key_choice-1;
 
 		switch (c.ch[0]) {
