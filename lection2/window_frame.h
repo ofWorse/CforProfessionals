@@ -1,17 +1,11 @@
 #include <stdio.h>
-#define MAX_FRAME 10
+#define MAX_FRAME 100
 
-struct window_frame 
-{
-	int startx,	endx, starty, endy; // позиции окна
-	int curx, cury; // текущая позиция курсора в окне
-	unsigned char *p; // указатель на буфер
-	char *header; // имя окна
-	int border; // есть/нет границы
-	int active; // на экране или невидимо
+struct window_frame {
+	int startx, starty, endx, endy;
+	int curx, cury;
+	unsigned char *p;
+	char *header;
+	int border;
+	int active;
 } frame[MAX_FRAME];
-
-
-
-
-
